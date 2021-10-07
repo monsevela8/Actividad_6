@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css/estilos.css" type="text/css"/>
+    <title>Generador de Tarjetas</title>
+</head>
+<body>
+    <header id="header">
+        <h1>Activida 6: Fatima Monserrat Velazquez Zarate</h1>
+    </header>
+    <section class="contenido">
+            <article>
+
+                <h1 class="tit"> Elige una plantilla</h1>
+
+                <select id="tipo">
+                    <option value="0">Selecciona..</option>
+                    <option value="cumple">Tarjeta de Cumpleaños</option>
+                    <option value="halloween">Tarjeta de dia de muertos</option>
+                    <option value="amor">Tarjeta de amor</option>
+                </select><br><br>
+
+                <h1 class="tit">Color de relleno<input type="color" id="fondo"></h1>
+                <br>
+
+                <h1 class="tit" >Selecciona la imagen de tu agrado</h1>
+
+                    <div id="cumple" name="tarimag" class="contenedorImg">
+                        <input class="ima" type="image" id="image" alt="" src="img/cumple1.jpg" onclick="imgTarjeta('cumple1')">
+                        <input class="ima" type="image" id="image" alt="" src="img/cumple2.jpg" onclick="imgTarjeta('cumple2')">
+                        <input class="ima" type="image" id="image" alt="" src="img/cumple3.jpg" onclick="imgTarjeta('cumple3')">
+                    </div>
+                    <div id="halloween" name="tarimag" class="contenedorImg">
+            
+                        <input class="ima" type="image" id="image" alt="" src="img/dead1.jpg" onclick="imgTarjeta('dead1')">
+                        <input class="ima" type="image" id="image" alt="" src="img/dead2.jpg" onclick="imgTarjeta('dead2')">
+                        <input class="ima" type="image" id="image" alt="" src="img/dead3.jpg" onclick="imgTarjeta('dead3')">
+                    </div>
+            
+                    <div id="amor" name="tarimag" class="contenedorImg">
+                        
+                        <input class="ima" type="image" id="image" alt="" src="img/amor1.jpg" onclick="imgTarjeta('amor1')">
+                        <input class="ima" type="image" id="image" alt="" src="img/amor2.jpg" onclick="imgTarjeta('amor2')">
+                        <input class="ima" type="image" id="image" alt="" src="img/amor3.jpg" onclick="imgTarjeta('amor3')">
+                    </div><br><br>
+
+                    <h1 class="tit">Escriba los datos</h1>
+
+                        <input type="text" placeholder="Nombre de la persona" id="nombre_envia" style="width: 15rem;" oninput="nombreEnvia()"><input type="color" id="color_nombre_envía" oninput="nombreEnvia()"><br><br>
+                        <input type="text" placeholder="Escribe el saludo" id="saludo" style="width: 15rem;" oninput="saludoTexto()"><input type="color" id="color_saludo" oninput="saludoTexto()"><br><br>
+                        <form>
+                            <textarea name="cuerpo_tex" id="cuerpo_tex" cols="50" rows="8" placeholder="Escribe el mensaje" oninput="cuerpoTexto()"></textarea>
+                            <input type="color" id="color_cuerpo_tex" oninput="cuerpoTexto()">
+                        </form>
+                
+                <h3>Vista Previa</h3>
+                <div id="VistaPrevia" class="VistaPrevia">
+                <div>
+                <div id="nombre_caja">
+                    <p id="nombre_envia_texto"></p>
+                </div>
+                <div id="saludo_caja">
+                    <p id="saludo_texto"></p>
+                </div>
+                <div id="cuerpo_caja">
+                    <p id="cuerpo_texto"></p>
+                </div>
+                <div id="Vista_imagen">
+                    <img src="media/fondo.png" alt="" id="Vista_Previa" style="width: 800px; height: 530px; margin: 47px 10px;">
+                </div>
+            </div>
+        </div>
+        <div>
+            <h2>¿Desea terminar su tarjeta?</h2>
+            <a id="mostrar_tarjeta">Aceptar</a>
+        </div>
+    </article>
+    </section>
+<script src="js/Script.js"></script>
+<footer>
+    <h2>Gracias por visitarnos:)</h2>
+</footer>
+</body>
+</html>
+
